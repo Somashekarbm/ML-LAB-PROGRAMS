@@ -12,8 +12,7 @@ y = iris.target
 print("Features:\n", iris.feature_names)
 print("Classes:\n", iris.target_names)
 
-df = pd.DataFrame(data=np.c_[iris['data'], iris['target']],
-columns=iris['feature_names'] + ['target'])
+df = pd.DataFrame(data=np.c_[iris['data'], iris['target']],columns=iris['feature_names'] + ['target'])
 print("\nFirst 5 rows of the dataset:\n", df.head())
 
 plt.figure(figsize=(10, 6))
