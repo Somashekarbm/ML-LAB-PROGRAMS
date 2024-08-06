@@ -32,7 +32,7 @@ print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 print("\nAccuracy Score:\n", accuracy_score(y_test, y_pred))
 
-svm_classifier_rbf = SVC(random_state = 42)
+svm_classifier_rbf = SVC(kernel='rbf',random_state = 42)
 svm_classifier_rbf.fit(X_train, y_train)
 y_pred = svm_classifier_rbf.predict(X_test)
 # Evaluate the model
